@@ -11,10 +11,31 @@
 }
 
 body {
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     font-size: 15px;
-    background-color: #222;
-    color: white;
+    background-color: black;
+    color: var(--white);
+}
+
+.header-container {
+    padding-top: 60px;
+
+}
+
+.headers {
+    font-family: 'Roboto Mono', Arial;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--electric-blue);
+}   
+
+.descriptions {
+    font-size: 17px;
+    font-family: 'Roboto', Arial;
+    font-weight: 300;
+    color: var(--white);
+    letter-spacing: 1.5px;
 }
 
 nav {
@@ -49,8 +70,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 88vh;
     position: relative;
+    background-color: white;
+    color: black;
 }
 
 .about-me-container-first {
@@ -83,7 +106,6 @@ nav {
     height: 100%;
     object-fit: cover;
     position: relative;
-    box-shadow: 0 12px 24px 10px rgba(255, 0, 0, 0.5); /* Test shadow color */
 }
 
 .about-me-text-container {
@@ -99,6 +121,7 @@ nav {
 
 .about-me-text-container p {
     font-size: 50px;
+    color: black;
 }
 
 /* Software engineer box positioned behind */
@@ -111,10 +134,12 @@ nav {
     background-color: #1E90FF;
     padding: 15px 10px;
     text-align: right;
+    /* box-shadow: 0 3px 12px 2px rgba(0, 0, 0, 0.5); Shadow applied to container */
 }
 
 #hi {
     font-size: 60px;
+    color: black;
 }
 
 .software-engineer-behind-text-container p {
@@ -128,5 +153,56 @@ nav {
 /*--------------------------------------------------------------------- Start of What I Do Section -------------------------------------------------------------------*/
 
 .what-i-do-parent {
+    background-color: black;
+}
 
+.what-i-do-header {
+    text-align: center;
+}
+
+.what-i-do-content-container {
+    display: flex;
+    justify-content: center;
+}
+
+#what {
+    color: var(--white);
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.services {
+    font-size: 25px;
+    margin-bottom: 25px;
+
+}
+
+.services a {
+    text-decoration: none;
+    border-bottom: 2px var(--aqua) solid;
+    padding-bottom: 7px;
+    color: var(--aqua);
+    cursor: default;
+}
+
+.what-i-do-card {
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 33%;
+    background-color: black;
+    border: 1px #aaaaaa solid;
+}
+
+.what-i-do-card i {
+    font-size: 40px;
+    color: var(--aqua);
+    padding: 15px 0px;
+}
+
+.what-i-do-description {
+    font-family: 'Roboto', Arial;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
 }
