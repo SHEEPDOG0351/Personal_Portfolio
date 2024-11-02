@@ -206,3 +206,58 @@ nav {
     font-weight: 400;
     line-height: 1.5;
 }
+
+/* ------------------------------------------------------------------- Start of projects section -------------------------------------------------------------------- */
+
+.projects {
+    background-color: #1A1A2E;
+}
+
+.header-container {
+    text-align: center  ;
+}
+
+#click {
+    color: var(--white);
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+#project {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+#project a {
+    color: var(--aqua);
+    text-decoration: none;
+    border-bottom: 2px var(--aqua) solid;
+    padding-bottom: 7px;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.rows {
+    justify-content: center;
+    display: flex;
+    padding: 40px 0px;
+}
+
+.project-card {
+    width: 32%;
+    margin: 10px;
+    background-color: black;
+    text-align: center;
+}
+
+.project-card p {
+    font-size: 30px;
+}
+
+.project-card img {
+    width: 100%;
+    padding-top: 20px;
+}
