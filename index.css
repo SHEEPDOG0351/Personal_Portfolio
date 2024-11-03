@@ -37,18 +37,16 @@ body {
     letter-spacing: 1.5px;
 }
 
-/* Default styles for nav */
 nav {
     display: flex;
     justify-content: center;
     padding-top: 10px;
     height: 55px;
-    width: 100%; /* Full width */
+    width: 100%;
     margin: 0 auto;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Styles for nav when scrolled */
 nav.scrolled {
     background-color: var(--white) !important;
     color: black !important;
@@ -56,19 +54,17 @@ nav.scrolled {
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visual distinction */
-    z-index: 1000; /* Ensures nav stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
-/* Style nav links to be black when scrolled */
 nav.scrolled .nav-items a {
-    color: black !important;  /* Change text to black */
-    transition: color 0.3s;   /* Smooth transition for color */
+    color: black !important; 
+    transition: color 0.3s;
 }
 
-/* Hover effect for nav links when scrolled */
 nav.scrolled .nav-items a:hover {
-    color: var(--electric-blue) !important; /* Turns red on hover */
+    color: var(--electric-blue) !important;
 }
 
 .nav-list {
@@ -84,13 +80,12 @@ nav.scrolled .nav-items a:hover {
 }
 
 .nav-items a {
-    color: white; /* Default color before scroll */
+    color: white; 
     text-decoration: none;
     padding: 0 10px;
-    transition: color 0.3s; /* Smooth color transition */
+    transition: color 0.3s;
 }
 
-/* Hover effect for nav links when not scrolled */
 .nav-items a:hover {
     color: var(--red);
 }
@@ -115,7 +110,6 @@ nav.scrolled .nav-items a:hover {
     transition: color 0.3s;
 }
 
-/* Main container centered */
 #parent-about-me-container {
     display: flex;
     justify-content: center;
@@ -132,7 +126,6 @@ nav.scrolled .nav-items a:hover {
     position: relative;
 }
 
-/* Image container */
 .about-me-img-parent-container {
     width: 350px;
     height: 350px;
@@ -140,9 +133,9 @@ nav.scrolled .nav-items a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Make image relative for stacking control */
-    z-index: 2; /* Image stays on top */
-    box-shadow: 0 12px 24px 10px rgba(0, 0, 0, 0.5); /* Shadow applied to container */
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 12px 24px 10px rgba(0, 0, 0, 0.5);
 }
 
 .child-image-container {
@@ -163,8 +156,8 @@ nav.scrolled .nav-items a:hover {
     flex-direction: column;
     justify-content: center;
     color: white;
-    position: relative; /* Text container relative */
-    z-index: 2; /* Text stays on top */
+    position: relative;
+    z-index: 2;
     padding-bottom: 80px;
     padding-left: 20px;
 }
