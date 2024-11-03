@@ -8,6 +8,7 @@
     --electric-blue: #1E90FF;
     --aqua: #00FFFF;
     --white: #FFFFFF;
+    --red: rgba(255, 0, 0, 0.86);
 }
 
 body {
@@ -19,7 +20,6 @@ body {
 
 .header-container {
     padding-top: 60px;
-
 }
 
 .headers {
@@ -27,7 +27,6 @@ body {
     letter-spacing: 3px;
     font-weight: 500;
     font-size: 40px;
-    color: var(--electric-blue);
 }   
 
 .descriptions {
@@ -38,14 +37,64 @@ body {
     letter-spacing: 1.5px;
 }
 
+/* Default styles for nav */
 nav {
     display: flex;
     justify-content: center;
     padding-top: 10px;
     height: 55px;
-    width: 70%;
+    width: 100%; /* Full width */
     margin: 0 auto;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
 }
+
+/* Styles for nav when scrolled */
+nav.scrolled {
+    background-color: var(--white) !important;
+    color: black !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visual distinction */
+    z-index: 1000; /* Ensures nav stays on top */
+}
+
+/* Style nav links to be black when scrolled */
+nav.scrolled .nav-items a {
+    color: black !important;  /* Change text to black */
+    transition: color 0.3s;   /* Smooth transition for color */
+}
+
+/* Hover effect for nav links when scrolled */
+nav.scrolled .nav-items a:hover {
+    color: var(--electric-blue) !important; /* Turns red on hover */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 20px;
+}
+
+.nav-items a {
+    color: white; /* Default color before scroll */
+    text-decoration: none;
+    padding: 0 10px;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for nav links when not scrolled */
+.nav-items a:hover {
+    color: var(--red);
+}
+
 
 .nav-list {
     display: flex;
@@ -63,17 +112,18 @@ nav {
     color: white;
     text-decoration: none;
     padding: 0 10px;
+    transition: color 0.3s;
 }
 
 /* Main container centered */
-.parent-about-me-container {
+#parent-about-me-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 88vh;
+    height: 100vh;
     position: relative;
-    background-color: white;
-    color: black;
+    background-color: rgb(20, 20, 20);
+    color: var(--white);
 }
 
 .about-me-container-first {
@@ -121,30 +171,28 @@ nav {
 
 .about-me-text-container p {
     font-size: 50px;
-    color: black;
+    color: var(--white);
 }
 
-/* Software engineer box positioned behind */
 .software-engineer-behind-text-container {
     position: absolute;
-    top: 206px; /* Adjust based on desired vertical position */
-    left: -70px; /* Adjust based on desired horizontal position behind image */
+    top: 206px;
+    left: -70px;
     width: 875px;
-    z-index: 1; /* Lower z-index to sit behind image and text */
-    background-color: #1E90FF;
+    z-index: 1; 
+    background-color: rgba(255, 0, 0, 0.86);
     padding: 15px 10px;
     text-align: right;
-    /* box-shadow: 0 3px 12px 2px rgba(0, 0, 0, 0.5); Shadow applied to container */
 }
 
 #hi {
     font-size: 60px;
-    color: black;
+    color: var(--white);
 }
 
 .software-engineer-behind-text-container p {
-    color: black;
-    font-size: 35.5px;
+    color: var(--white);
+    font-size: 17px;
     font-family: 'Roboto Mono';
     font-weight: 300;
     letter-spacing: 3px;
@@ -152,8 +200,23 @@ nav {
 
 /*--------------------------------------------------------------------- Start of What I Do Section -------------------------------------------------------------------*/
 
-.what-i-do-parent {
-    background-color: black;
+#what-i-do-parent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#what-i-do-parent::before{
+    opacity: 0.4;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url('computer-engineering.jpg');
+    position: absolute;
+    content: '';
 }
 
 .what-i-do-header {
@@ -166,9 +229,9 @@ nav {
 }
 
 #what {
-    color: var(--white);
-    font-size: 16px;
-    padding-bottom: 5px;
+    color: var(--red);
+    font-size: 70px;
+    padding-bottom: 50px;
 }
 
 .services {
@@ -190,14 +253,17 @@ nav {
     padding: 20px;
     text-align: center;
     width: 33%;
-    background-color: black;
-    border: 1px #aaaaaa solid;
+    /* background-color: black; */
+}
+
+.what-headers {
+    font-size: 30px;
 }
 
 .what-i-do-card i {
-    font-size: 40px;
-    color: var(--aqua);
-    padding: 15px 0px;
+    font-size: 50px;
+    color: var(--red);
+    padding: 20px 0px;
 }
 
 .what-i-do-description {
@@ -205,12 +271,13 @@ nav {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
+    padding-bottom: 30px;
 }
 
 /* ------------------------------------------------------------------- Start of projects section -------------------------------------------------------------------- */
 
 .projects {
-    background-color: #1A1A2E;
+    background-color: rgb(20, 20, 20);
 }
 
 .header-container {
@@ -225,7 +292,6 @@ nav {
 
 #project {
     font-size: 30px;
-    padding-bottom: 20px;
 }
 
 #project a {
@@ -240,10 +306,14 @@ nav {
     flex-direction: column;
 }
 
+.project-headers {
+    padding: 10px;
+}
+
 .rows {
     justify-content: center;
     display: flex;
-    padding: 40px 0px;
+    padding: 20px 0px;
 }
 
 .project-card {
@@ -260,4 +330,40 @@ nav {
 .project-card img {
     width: 100%;
     padding-top: 20px;
+}
+
+/* ----------------------------------------------------------------------------- Start of footer --------------------------------------------------------------- */
+
+footer {
+    background-color: black;
+    text-align: center;
+}
+
+#contact-footer {
+    font-size: 40px;
+    padding: 20px 0px;
+}
+
+#footer-divider {
+    border: none;
+    border-top: 2px dashed var(--red);
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer-body {
+    font-size: 20px;
+    /* padding-bottom: 60px; */
+    width: 93%;
+    margin: 0 auto;
+}
+
+.footer-body ul {
+    list-style-type: none;
+}
+
+.contact-item {
+    padding: 5px;
+    font-size: 20px;
 }
